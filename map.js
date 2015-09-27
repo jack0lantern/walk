@@ -1,8 +1,5 @@
+// DEPRECATED
 var XLSX = require('xlsx');
-
-exports.addNode = function() {
-  
-}
 
 exports.build = function(sheet) {
   var workbook = XLSX.readFile(sheet);

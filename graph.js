@@ -1,3 +1,5 @@
+// DEPRECATED
+
 var fs = require('fs');
 var key = fs.readFileSync('key.txt').toString();
 
