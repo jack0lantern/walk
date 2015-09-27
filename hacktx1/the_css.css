@@ -8,10 +8,18 @@
 }
 .form {
 	position: absolute;
-	top:32%;
-	left:40.5%;
-	background-color: #FED9AC;
+	top:25%;
+	left:38.5%;
+	background-color: rgba(77,77,77,0.5);
 	padding: 15px 15px;
+	opacity: 5;
+}
+
+
+.WTF { 
+	position: absolute;
+	z-index: 99;
+	left: 90%;
 }
 
 legend {
