@@ -267,8 +267,10 @@ function init() {
 
   var origin1 = {lat: 55.93, lng: -3.118};
   var origin2 = 'Greenwich, England';
+var origin3 = {lat: 56.93, lng: -3.118}
   var destinationA = 'Stockholm, Sweden';
   var destinationB = {lat: 50.087, lng: 14.421};
+    var destinationC = {lat: 55.93, lng: -3.108};
 
 //  var destinationIcon = 'https://chart.googleapis.com/chart?' +
 //      'chst=d_map_pin_letter&chld=D|FF0000|000000';
@@ -280,9 +282,14 @@ function init() {
 //  });
   var geocoder = new google.maps.Geocoder;
     var service = new google.maps.DistanceMatrixService;
+var temp = [];
+    while(latslngs.length > 0) {
+        var end = latslngs[latslngs.length - 1];
+        temp = [end];
+        latslngs.splice(latslngs.length - 1, 1);
   service.getDistanceMatrix({
-    origins: latslngs,
-    destinations: [destinationA, destinationB],
+    origins: [origin1],
+    destinations: [{lat: 56.93, lng: -3.108}],
     travelMode: google.maps.TravelMode.WALKING,
     unitSystem: google.maps.UnitSystem.METRIC,
     avoidHighways: false,
@@ -301,13 +308,14 @@ function init() {
         var results = response.rows[i].elements;
         
         for (var j = 0; j < results.length; j++) {
-//          outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
-//              ': ' + results[j].distance.text + ' in ' +
-//              results[j].duration.text + '<br>';
+          outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
+              ': ' + results[j].distance.text + ' in ' +
+              results[j].duration.text + '<br>';
         }
       }
     }
   });
+    }
     alert();
 //    var file = 'list.xlsx';
 //    XLSX.read(file, {type: 'binary'});
