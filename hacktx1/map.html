@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+  	<link rel='styleshhet' href='bootstrap_map.css' type='text/css'>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  	<link rel="stylesheet" href="the_css.css" type="text/css">
+  	<script src="https://maps.googleapis.com/maps/api/js"></script>
+  	<script src="map.js"></script>
+  </head>
+  <body>
+  	<div id="map" class="container=fluid"></div>
+  	<div class='form'>
+  	<form class="form-horizontal">
+  		<fieldset>
+    		<legend align='center'>walk</legend>
+    		<div class="form-group">
+     			<!--<label for="starthere" class="col-lg-2 control-label">start</label>-->
+      			<div class="col-lg-10">
+        			<input type="text" class="form-control" id="inputEmail" placeholder="start">
+     			 </div>
+   			 </div>
+   			<div class="form-group">
+     			 <!--<label for="endhere" class="col-lg-2 control-label">end</label>-->
+     			 <div class="col-lg-10">
+       				 <input type="password" class="form-control" id="inputPassword" placeholder="end">
+      			</div>
+   			</div>
+        <div class="form-group" id='submit-button'>
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="submit" class="btn btn-primary">submit</button>
+          </div>
+        </div>
+    	</fieldset>
+  	</form>
+  	</div>
+
+
+  </body>
+</html>
