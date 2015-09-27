@@ -1,18 +1,13 @@
+var walkPath;
+var map;
+
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: {lat: 30.286, lng: -97.737},
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-}
- 
-//displays map on page load
-google.maps.event.addDomListener(window, 'load', initMap);
 
-<<<<<<< HEAD
-function plotWalk(walkPathCoords) {
-    var walkPath = new google.maps.Polyline({
-=======
   var walkPathCoords = [
    {lat: 30.289039, lng: -97.739754}, 
 {lat: 30.289016, lng: -97.739512}, 
@@ -35,8 +30,7 @@ function plotWalk(walkPathCoords) {
 {lat: 30.284743, lng: -97.738500}, 
 {lat: 30.284528, lng: -97.738296}
   ];
-  var walkPath = new google.maps.Polyline({
->>>>>>> origin/master
+    walkPath = new google.maps.Polyline({
     path: walkPathCoords,
     geodesic: true,
     strokeColor: '#FF0000',
@@ -44,11 +38,8 @@ function plotWalk(walkPathCoords) {
     strokeWeight: 5
   });
     
-  walkPath.setMap(map);
+  
 }
-<<<<<<< HEAD
-    
-=======
  
 //displays map on page load
 google.maps.event.addDomListener(window, 'load', initMap);
@@ -59,8 +50,8 @@ $(document).ready(function() {
   // Instead of directly editing CSS, toggle a class
     $('.form').fadeOut('slow');
     $(map).css("opacity", 10);
+    walkPath.setMap(map);
   });
 });
 
 
->>>>>>> origin/master
