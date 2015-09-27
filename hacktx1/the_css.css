@@ -18,3 +18,9 @@ legend {
 	font-size: 2em;
 	color: black;
 }
+
+.chosen-select {
+	width: 60%;
+	left: 50px;
+	position: absolute;
+}
