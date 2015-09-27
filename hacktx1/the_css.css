@@ -19,6 +19,14 @@ legend {
 	color: black;
 }
 
+div {
+	text-align: center;
+}
+
+.triangle {
+	padding-bottom: 15px;
+}
+
 .chosen-select {
 	width: 60%;
 	left: 50px;
