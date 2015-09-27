@@ -4,7 +4,15 @@ function initMap() {
     center: {lat: 30.286, lng: -97.737},
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+}
+ 
+//displays map on page load
+google.maps.event.addDomListener(window, 'load', initMap);
 
+<<<<<<< HEAD
+function plotWalk(walkPathCoords) {
+    var walkPath = new google.maps.Polyline({
+=======
   var walkPathCoords = [
    {lat: 30.289039, lng: -97.739754}, 
 {lat: 30.289016, lng: -97.739512}, 
@@ -28,6 +36,7 @@ function initMap() {
 {lat: 30.284528, lng: -97.738296}
   ];
   var walkPath = new google.maps.Polyline({
+>>>>>>> origin/master
     path: walkPathCoords,
     geodesic: true,
     strokeColor: '#FF0000',
@@ -37,6 +46,9 @@ function initMap() {
     
   walkPath.setMap(map);
 }
+<<<<<<< HEAD
+    
+=======
  
 //displays map on page load
 google.maps.event.addDomListener(window, 'load', initMap);
@@ -51,3 +63,4 @@ $(document).ready(function() {
 });
 
 
+>>>>>>> origin/master
