@@ -11,18 +11,21 @@ test
 
 <script src="xlsx.js"></script>
 <script src="jszip.js"></script>
-<script src="https://maps.googleapis.com/maps-api-v3/api/js/22/6/map.js"></script>
-<script src="https://maps.googleapis.com/maps-api-v3/api/js/22/6/distance_matrix.js"></script>
+    
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPR2rOcZsvGqHM2BorE93K3ARV-SUc7Ec&signed_in=true&callback=init"
+        async defer></script>
 <script src="init.js"></script>
+    
 
 </head>
 
 <body>
 
-<div id="content">
-<script>init();</script>
+<div id="map">
 </div>
 
+<div id="output">
+</div>
 </body>
 
 </html>
