@@ -8,9 +8,14 @@ function Node(code, lat, lng, edges) {
 	this.lat = lat;
 	this.lng = lng;
 	this.edges = edges;
+	this.makeEdge = function (node) {
+		this.edges.push(node);
+		node.edges.push(this);
+	}
 }
 
-function makeEdge(node1, node2) {
-	node1.edges.push(node2);
-	node2.edges.push(node1);
+
+
+function Graph(node) {
+	this.nodes = [node];
 }

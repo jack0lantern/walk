@@ -1,16 +1,23 @@
-// DEPRECATED
-var XLSX = require('xlsx');
+function initialize() {
+	var mapCanvas = document.getElementById('map');
+	var mapOptions = {
+		center: new google.maps.LatLng(30.286, -97.735),
+		zoom: 16,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(mapCanvas,mapOptions);
+}
 
-exports.build = function(sheet) {
-  var workbook = XLSX.readFile(sheet);
-  var sheet_name_list = workbook.SheetNames;
-  sheet_name_list.forEach(function(y) { /* iterate through sheets */
-    var worksheet = workbook.Sheets[y];
-    for (var z in worksheet) {
-      /* all keys that do not begin with "!" correspond to cell addresses */
-      if(z[0] === '!') continue;
-      console.log(worksheet[z].v);
-    }
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+$(document).ready(function() {
+  $("#submit-button").click(function() {
+  // Instead of directly editing CSS, toggle a class
+  	$('.form').fadeOut('slow');
+  	$(map).css("opacity", 10);
   });
-};
+});
+
 
